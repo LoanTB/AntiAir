@@ -65,4 +65,4 @@ The simulation models a simple missile defense system:
 This project is licensed under the Mozilla Public License 2.0 (MPL-2.0).
 
 ### Additional Note on Commercial Use
-**Commercial use of this software or any derived works is prohibited without prior written permission from the original author.** For commercial licensing inquiries, please contact [your-email@example.com].
+**Commercial use of this software or any derived works is prohibited without prior written permission from the original author.** For commercial licensing inquiries, please contact loan.tremoulet.breton@gmail.com.
