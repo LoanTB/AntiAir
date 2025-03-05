@@ -19,7 +19,7 @@ def collision(rectA, rectB):
     else:
         return True
 
-def angle(A,B,C): #Trois [x,y]
+def angle(A,B,C):
     AB = [B[0]-A[0],B[1]-A[1]]
     AC = [C[0]-A[0],C[1]-A[1]]
     rad = atan2(AC[1],AC[0])-atan2(AB[1],AB[0])
@@ -51,9 +51,6 @@ while True:
     screen.fill([25,25,25])
     for particule in particules:
         pygame.draw.circle(screen, (random.randint(0,255),random.randint(0,255),random.randint(0,255)), [particule[0][0],particule[0][1]],particule[0][2])
-        #pygame.draw.circle(screen, (255,255,0), [particule[0][0],particule[0][1]],particule[0][2])
-        #particule[1][0] *= 0.99
-        #particule[1][1] *= 0.99
         particule[0][0] += particule[1][0]
         particule[0][1] += particule[1][1]
         particule[2] -= 1
@@ -109,21 +106,10 @@ while True:
             for i in range(anti[0][2]*2):
                 particules.append([[anti[0][0],anti[0][1],random.randint(1,2)],[anti[1]*cos(anti[2])+(((random.random()-0.5)*2)*0.5),anti[1]*sin(anti[2])+(((random.random()-0.5)*2)*0.5)],random.randint(30,100)])
         ang = angle([anti[0][0],anti[0][1]],[anti[0][0]+100,anti[0][1]],[anti[3][0][0],anti[3][0][1]])
-        """if ang-anti[2] < 0.5*pi:
-            anti[2] += (ang-anti[2])/100
-        else:
-            anti[2] += (ang-anti[2]-(0.5*pi))/100"""
-
         anti[2] = ang
         anti[0][0] += anti[1]*cos(anti[2])
         anti[0][1] += anti[1]*sin(anti[2])
-        #pygame.draw.lines(screen,[100,100,100],5,[[anti[3][0][0],anti[3][0][1]],[anti[0][0],anti[0][1]],[anti[0][0]+100,anti[0][1]]])
         pygame.draw.line(screen,[50,25,50],[anti[3][0][0],anti[3][0][1]],[anti[0][0],anti[0][1]],3)
-        #pygame.draw.circle(screen, (0,255,255), [anti[0][0],anti[0][1]], anti[0][2])
-        #pygame.display.update()
-
-        """missile[0][0] += (Dx/D)*missile[1]
-        missile[0][1] += (Dy/D)*missile[1]"""
     for anti in antis:
         pygame.draw.circle(screen, (255,0,255), [anti[3][0][0],anti[3][0][1]], anti[3][0][2])
         pygame.draw.circle(screen, (0,255,0), [anti[0][0],anti[0][1]], anti[0][2])
