@@ -16,24 +16,6 @@ A visual simulation of missile interception using anti-missiles, created in Pyth
 - **Python 3.x**
 - **Pygame**: Install it via pip with `pip install pygame`
 
-## How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/Missile-Defense-Simulation.git
-   cd Missile-Defense-Simulation
-   ```
-
-2. Install Pygame if not already installed:
-   ```bash
-   pip install pygame
-   ```
-
-3. Run the simulation:
-   ```bash
-   python main.py
-   ```
-
 ## Project Structure
 
 - **`main.py`**: The main script for the simulation. It initializes the screen, handles missile and anti-missile creation, and updates the game loop.
